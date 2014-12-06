@@ -16,13 +16,13 @@ body {
 .theme {
     float: none;
     font-size: 1.5em;
-    width: 85.14%;
+    width: 85.13700116545434%;
     height: auto;
-    text-align: center;
+    text-align: left;
     font-weight: 700;
     line-height: 1em;
     word-wrap: break-word;
-    margin-left: auto;
+    margin-left: 7.20427601173492%;
     margin-top: 30px;
     clear: none;
     min-height: 0px;
@@ -35,10 +35,9 @@ body {
     float: left;
     height: 508px;
     margin-left: 7.20427601173492%;
-    margin-top: 22px;
+
     clear: none;
     width: 85.13700116545434%;
-    background-image:-webkit-linear-gradient(315deg,white 0%,rgba(255,157,0,0.0901961) 100%);
     background-attachment: scroll;
     background-size: auto;
     border-top-left-radius: 10px;
