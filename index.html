@@ -2,26 +2,40 @@
 <html>
 <!-- This code is only meant for previewing your Reflow design. -->
 <head>
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.css"/>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
     <meta charset="utf-8">
     <meta charset="utf-8">
 
-
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.min.js"></script>
 </head>
 <body>
 <title>chillgeo.ch</title>
+
 <div class="wrapper clearfix">
+
 
     <p class="theme">
 
-    <ul class="nav nav-tabs">
-        <li role="presentation" class="active"><a href="#/home/chillgeo">home</a></li>
-        <li role="presentation"><a href="#/about">&Uuml;ber mich</a></li>
-        <li role="presentation"><a href="#/services">Ich biete</a></li>
-        <li role="presentation"><a href="#/projects">Projekte</a></li>
-    <li role="presentation"><a href="#/contact">Kontakt</a></li>
-    </ul>
+
+    <div id="main" ng-app>
+        <!-- The navigation menu will get the value of the "active" variable as a class.
+             The $event.preventDefault() stops the page from jumping when a link is clicked. -->
+
+        <nav class="{{active}}" ng-click="$event.preventDefault()">
+
+            <!-- When a link in the menu is clicked, we set the active variable -->
+
+            <a href="#/home/chillgeo" class="home" ng-click="active='home'">Home</a>
+            <a href="#/about" class="about" ng-click="active='about'">about</a>
+            <a href="#/projects" class="projects" ng-click="active='projects'">Projects</a>
+            <a href="#/services" class="services" ng-click="active='services'">Services</a>
+            <a href="#/contact" class="contact" ng-click="active='contact'">Contact</a>
+        </nav>
+
+
+    </div>
+
     </p>
 
     <div class='container clearfix' ng-view>
@@ -30,13 +44,20 @@
 </div>
 
 
-
-<script type="text/javascript" src="../libs/angularjs/1.0.5/angular.min.js"></script>
+<!-- If localhost -->
+<!-- <script type="text/javascript" src="../libs/angularjs/1.0.5/angular.min.js"></script> -->
 <script type="text/javascript" src="js/MainModule.js"></script>
 <script type="text/javascript" src="js/ctrl/CtrlModule.js"></script>
 <script type="text/javascript" src="js/ctrl/Routing.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript">
 
+    $('#myTab a').click(function (e) {
+        e.alert('dadasdad')
+        e.preventDefault()
+        $(this).tab('show')
+    })
 
+</script>
 </body>
 </html>
