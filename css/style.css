@@ -1,0 +1,108 @@
+/* This code is only meant for previewing your Reflow design. */
+.wrapper {
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100%;
+    width: 90%;
+}
+body {
+    background-image:-webkit-linear-gradient(315deg,white 9%,rgb(211,192,45) 88%);
+    background-attachment: fixed;
+    background-size: auto;
+    background-position: 0% 0%;
+    background-repeat: repeat repeat;
+}
+.theme {
+    float: none;
+    font-size: 1.5em;
+    width: 85.14%;
+    height: auto;
+    text-align: center;
+    font-weight: 700;
+    line-height: 1em;
+    word-wrap: break-word;
+    margin-left: auto;
+    margin-top: 30px;
+    clear: none;
+    min-height: 0px;
+    min-width: 0px;
+    margin-right: auto;
+    font-style: normal;
+    text-shadow: rgba(0, 0, 0, 0.458824) 2px 2px 1px;
+}
+.container {
+    float: left;
+    height: 508px;
+    margin-left: 7.20427601173492%;
+    margin-top: 22px;
+    clear: none;
+    width: 85.13700116545434%;
+    background-image:-webkit-linear-gradient(315deg,white 0%,rgba(255,157,0,0.0901961) 100%);
+    background-attachment: scroll;
+    background-size: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 3px outset rgba(195, 195, 195, 0.85098);
+    background-position: 0% 0%;
+    background-repeat: repeat repeat;
+}
+.content {
+    float: left;
+    height: 458px;
+    margin-left: 8%;
+    margin-top: 20px;
+    clear: none;
+    width: 84.31076923076922%;
+    border: 1px dotted rgba(157, 146, 100, 0.509804);
+}
+
+.content-text {
+    float: left;
+    font-size: 1em;
+    width: 94.12132352941175%;
+    height: auto;
+    text-align: left;
+    font-weight: normal;
+    line-height: 1em;
+    word-wrap: break-word;
+    margin: 12px 12px 12px 8px;
+    clear: both;
+    min-height: 0px;
+    min-width: 0px;
+}
+
+.content-header{
+    float: left;
+    font-size: 1em;
+    width: 94.12132352941175%;
+    height: auto;
+    text-align: center;
+    font-weight: 700;
+    line-height: 1em;
+    word-wrap: break-word;
+    margin-left: 8px;
+    margin-top: 12px;
+    clear: none;
+    min-height: 0px;
+    min-width: 0.5em;
+    margin-right: 12px;
+    text-decoration: underline;
+}
+
+form label {
+    float: left;
+    margin-left: 1%;
+    clear: both;
+}
+form input {
+    margin-right: 1%;
+    width: 63%;
+    float: right;
+}form textarea {
+     margin-right: 1%;
+     width: 63%;
+     float: right;
+ }
