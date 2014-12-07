@@ -6,7 +6,7 @@ function HomeCtrl($scope, $log, $routeParams) {
 function AboutCtrl($scope, $log, $location) {
     $log.log("AboutCtrl");
 
-    $scope.openContact = function () {
+    $scope.openAbout = function () {
         $log.log($location);
         $location.path("/contact");
     }
@@ -15,7 +15,7 @@ function AboutCtrl($scope, $log, $location) {
 function ServicesCtrl($scope, $log, $location) {
     $log.log("ServicesCtrl");
 
-    $scope.openContact = function () {
+    $scope.openServices = function () {
         $log.log($location);
         $location.path("/services");
     }
@@ -24,7 +24,7 @@ function ServicesCtrl($scope, $log, $location) {
 function SkillsCtrl($scope, $log, $location) {
     $log.log("SkillsCtrl");
 
-    $scope.openContact = function () {
+    $scope.openSkills = function () {
         $log.log($location);
         $location.path("/skills");
     }
@@ -33,7 +33,7 @@ function SkillsCtrl($scope, $log, $location) {
 function ProjectsCtrl($scope, $log, $location) {
     $log.log("ProjectsCtrl");
 
-    $scope.openContact = function () {
+    $scope.openProjects = function () {
         $log.log($location);
         $location.path("/projects");
     }
