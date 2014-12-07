@@ -47,7 +47,7 @@ var ctrl = angular.module('app.ctrl', [])
         .controller('HoneCtrl', HomeCtrl)
         .controller('AboutCtrl', AboutCtrl)
         .controller('ServicesCtrl', ServicesCtrl)
-        .controller('SkillsCtrl', SkilsCtrl)
+        .controller('SkillsCtrl', SkillsCtrl)
         .controller('ProjectsCtrl', ProjectsCtrl)
         .controller('ContactCtrl', ContactCtrl)
     ;
