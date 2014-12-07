@@ -21,6 +21,15 @@ function ServicesCtrl($scope, $log, $location) {
     }
 
 }
+function SkillsCtrl($scope, $log, $location) {
+    $log.log("SkillsCtrl");
+
+    $scope.openContact = function () {
+        $log.log($location);
+        $location.path("/skills");
+    }
+
+}
 function ProjectsCtrl($scope, $log, $location) {
     $log.log("ProjectsCtrl");
 
@@ -38,6 +47,7 @@ var ctrl = angular.module('app.ctrl', [])
         .controller('HoneCtrl', HomeCtrl)
         .controller('AboutCtrl', AboutCtrl)
         .controller('ServicesCtrl', ServicesCtrl)
+        .controller('SkillsCtrl', SkilsCtrl)
         .controller('ProjectsCtrl', ProjectsCtrl)
         .controller('ContactCtrl', ContactCtrl)
     ;
