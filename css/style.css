@@ -40,11 +40,11 @@ body {
     width: 85.13700116545434%;
     background-attachment: scroll;
     background-size: auto;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border: 3px outset rgba(195, 195, 195, 0.85098);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 1px outset rgba(195, 195, 195, 0.85098);
     background-position: 0% 0%;
     background-repeat: repeat repeat;
 }
@@ -53,6 +53,7 @@ body {
     height: auto;
     margin-left: 8%;
     margin-top: 20px;
+    margin-bottom: 20px;
     clear: none;
     width: 84.31076923076922%;
     border: 1px dotted rgba(157, 146, 100, 0.509804);
@@ -136,7 +137,7 @@ section, footer, header, aside, nav{
 nav{
     display:inline-block;
     margin:60px auto 45px;
-    background-color:#5597b4;
+    background-color: rgba(18, 92, 165, 0.42);
     box-shadow:0 1px 1px #ccc;
     border-radius:2px;
 }
@@ -170,13 +171,13 @@ nav.projects .projects,
 nav.services .services,
 nav.contact .contact,
 nav.about .about{
-    background-color:#e35885;
+    background-color: #3f6a98;
 }
 
 p{
     font-size:22px;
     font-weight:bold;
-    color:#7d9098;
+    color: #3f6a98;
 }
 
 p b{
