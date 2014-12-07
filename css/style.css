@@ -44,7 +44,7 @@ body {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
-    border: 1px outset rgba(195, 195, 195, 0.85098);
+    border: 2px outset rgba(63, 106, 152, 0.85);
     background-position: 0% 0%;
     background-repeat: repeat repeat;
 }
@@ -56,7 +56,7 @@ body {
     margin-bottom: 20px;
     clear: none;
     width: 84.31076923076922%;
-    border: 1px dotted rgba(157, 146, 100, 0.509804);
+    border: 1px dashed rgba(196, 215, 224, 0.51);
 }
 
 .content-text {
