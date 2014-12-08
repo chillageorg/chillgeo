@@ -14,7 +14,7 @@ function AboutCtrl($scope, $log, $location) {
 }
 function ServicesCtrl($scope, $log, $location) {
     $log.log("ServicesCtrl");
-
+    //$scope.jquery.$('#divservice').css('background-color','red');
     $scope.openServices = function () {
         $log.log($location);
         $location.path("/services");

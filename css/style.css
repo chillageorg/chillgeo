@@ -60,7 +60,24 @@ body {
     margin-left: -16px;
     margin-right: -15px;
 }
-
+.conthead.services{
+    background-color: #0000cc;
+}
+.conthead.about{
+    background-color: #005580;
+}
+.conthead.contact{
+    background-color: #0033cc;
+}
+.conthead.home{
+    background-color: #0033cc;
+}
+.conthead.projects{
+    background-color: #a9302a;
+}
+.conthead.skills{
+    background-color: chocolate;
+}
 .content {
     float: left;
     height: auto;
