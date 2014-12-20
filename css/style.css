@@ -3,7 +3,7 @@
     height: auto;
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
+    width: 95%;
 }
 
 body {
@@ -106,7 +106,7 @@ body {
     background-image: url("../img/bannerskills.jpg");
     background-repeat: no-repeat;
     background-size:100%;
-    opacity: 0.4;;
+    opacity: 0.4;
 }
 .content {
     float: left;

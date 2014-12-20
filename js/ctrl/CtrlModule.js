@@ -2,6 +2,7 @@ function HomeCtrl($scope, $log, $routeParams) {
     $log.log("HomeCtrl");
 
     $scope.username = $routeParams.name;
+
 }
 function AboutCtrl($scope, $log, $location) {
     $log.log("AboutCtrl");

@@ -9,7 +9,7 @@ app.config ( ['$routeProvider',
             when ( '/skills',    {templateUrl:'templates/skills.html', controller: SkillsCtrl }).
             when ( '/projects',    {templateUrl:'templates/projects.html', controller: ProjectsCtrl }).
             when ( '/contact',    {templateUrl:'templates/contact.html', controller: ContactCtrl }).
-            otherwise( {redirectTo: '/home/Gast' } )
+            otherwise( {templateUrl:'templates/home.html', controller: HomeCtrl  } )
 
     }]
 
