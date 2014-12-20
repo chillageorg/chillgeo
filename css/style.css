@@ -7,11 +7,12 @@
 }
 
 body {
-
+    background-image: url("../img/bodyimg.jpg");
     background-attachment: fixed;
     background-size: auto;
     background-position: 0% 0%;
     background-repeat: repeat repeat;
+    opacity: 2;
 }
 
 .theme {
@@ -46,37 +47,66 @@ body {
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
     border-bottom-left-radius: 2px;
-    border: 2px outset rgba(63, 106, 152, 0.85);
-    border-color: rgba(63, 106, 152, 0.85);
+    border: 1px outset rgba(0, 0, 0, 0.85);
+    border-color: rgba(0, 0, 0, 0.85);
     background-position: 0% 0%;
     background-repeat: repeat repeat;
+    background-color: #8ad3f4;
+    opacity: 0.9;
 }
 
 .conthead {
     height: 120px;
     border-bottom-style: solid;
-    border-bottom-width: 1px;
+    border-width: 1px;
     border-bottom-color: rgba(63, 106, 152, 0.85);
-    margin-left: -16px;
+    margin-left: -15px;
     margin-right: -15px;
 }
 .conthead.services{
     background-color: #0000cc;
+    background-image: url('../img/bannerservices.jpg');
+    background-repeat: no-repeat;
+    background-size:100%;
+    opacity: 0.9;
 }
 .conthead.about{
     background-color: #005580;
+    background-image: url('../img/bannerabout.jpg');
+    background-repeat: no-repeat;
+    background-size:100%;
+    opacity: 0.9;
 }
 .conthead.contact{
-    background-color: #0033cc;
+    background-color: #ffffff;
+    background-image: url('../img/bannercontact.jpg');
+    background-repeat: no-repeat;
+    background-position: right;
+    opacity: 0.9;
 }
 .conthead.home{
-    background-color: #0033cc;
+    background-color: #ffffff;
+    background-image: url('../img/bannerhome.jpg');
+    background-repeat: no-repeat;
+    background-position: left;
+    opacity: 0.9;
+    font-size: 23px;
+    vertical-align: bottom;
+
 }
 .conthead.projects{
-    background-color: #a9302a;
+    background-color: #ffffff;
+    background-image: url('../img/bannerprojects.jpg');
+    background-repeat: no-repeat;
+    background-size:100%;
+    opacity: 0.9;
 }
 .conthead.skills{
     background-color: chocolate;
+    background-image: url("../img/bannerskills.jpg");
+    background-repeat: no-repeat;
+    background-size:100%;
+    opacity: 0.4;;
 }
 .content {
     float: left;
@@ -86,7 +116,7 @@ body {
     margin-bottom: 20px;
     clear: none;
     width: 84.31076923076922%;
-    border: 1px dashed rgba(196, 215, 224, 0.51);
+    border: 1px dashed rgba(0, 0, 0, 0.51);
 }
 
 .content-text {
@@ -152,7 +182,7 @@ form textarea {
 }
 
 body {
-    font: 15px/1.3 'Open Sans', sans-serif;
+    font-family: tahoma, verdana, "sans-serif";
     color: #5e5b64;
     text-align: center;
 }
@@ -179,7 +209,7 @@ nav {
     display: inline-block;
     margin: 60px auto 45px;
     background-color: rgba(18, 92, 165, 0.42);
-    box-shadow: 0 1px 1px #ccc;
+    /*box-shadow: 0 1px 1px #ccc;*/
     border-radius: 2px;
     width: 85.13700116545431%;
 }
@@ -220,7 +250,7 @@ nav.about .about {
 p {
     font-size: 22px;
     font-weight: bold;
-    color: #3f6a98;
+    color: #51555e;
 }
 
 p b {
