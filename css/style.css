@@ -88,10 +88,10 @@ body {
     background-color: #ffffff;
     background-image: url('../img/bannerhome.jpg');
     background-repeat: no-repeat;
-    background-position: left;
-    opacity: 0.9;
-    font-size: 23px;
-    vertical-align: bottom;
+    background-repeat: no-repeat;
+    background-size:100%;
+    opacity: 0.4;
+
 
 }
 .conthead.projects{
