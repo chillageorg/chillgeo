@@ -1,5 +1,5 @@
 
-<div class='conthead about'>
+<div class='conthead about' id="divabout">
 
 </div>
 <div class='content'>
@@ -28,3 +28,11 @@
 
     </p>
 </div>
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+
+        jQuery('#divabout').hide();
+        jQuery("#divabout").fadeIn(2000);
+        jQuery("#divabout").show();
+    });
+</script>

@@ -1,4 +1,4 @@
-<div class='conthead projects'>
+<div class='conthead projects' id="divprojects">
 
 </div>
 <div class='content clearfix'>
@@ -9,3 +9,11 @@
 
     </p>
 </div>
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+
+        jQuery('#divprojects').hide();
+        jQuery("#divprojects").fadeIn(2000);
+        jQuery("#divprojects").show();
+    });
+</script>

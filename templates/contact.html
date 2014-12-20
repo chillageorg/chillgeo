@@ -1,4 +1,4 @@
-<div class='conthead contact'>
+<div class='conthead contact' id="divcontact">
 
 </div>
 <form id="formID">
@@ -48,6 +48,8 @@
     jQuery(document).ready(function () {
 
         jQuery("#formID").validationEngine();
-        //jQuery('#formID').validationEngine('validate');
+        jQuery('#divcontact').hide();
+        jQuery("#divcontact").fadeIn(2000);
+        jQuery("#divcontact").show();
     });
 </script>
