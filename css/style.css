@@ -118,7 +118,22 @@ body {
     width: 84.31076923076922%;
     border: 1px dashed rgba(0, 0, 0, 0.51);
 }
-
+.content-home{
+    float: left;
+    font-size: 1em;
+    width: 94.12132352941175%;
+    height: 380px;
+    text-align: left;
+    font-weight: normal;
+    line-height: 1em;
+    word-wrap: break-word;
+    margin: 0px 0px 0px 0px;
+    clear: both;
+    min-height: 100%;
+    min-width: 100%;
+    background-size: auto;
+    opacity: 1;
+}
 .content-text {
     float: left;
     font-size: 1em;
