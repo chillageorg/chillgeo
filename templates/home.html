@@ -6,15 +6,13 @@
 </div>
 <script type="text/javascript">
     jQuery(document).ready(function () {
-        var timerOffset = 3000;
-        var timerIncrement = 6000;
-        var iCount = 1;
+
         jQuery('#divhome').hide();
         jQuery("#divhome").fadeIn(2000);
         jQuery("#divhome").show();
 
 
-        var imageUrl = 'img/home/intro.jpg';
+        var imageUrl = 'img/home/01.jpg';
         jQuery('#contenthome').css({
             backgroundImage : 'url(' + imageUrl + ')',
             backgroundRepeat : 'no-repeat'
@@ -24,57 +22,8 @@
         jQuery("#contenthome").fadeIn(1000);
         jQuery("#contenthome").show();
 
-        var refreshId = setInterval(function() {
-        var imageUrl = 'img/home/01.jpg';
-        jQuery('#contenthome').css({
-            backgroundImage : 'url(' + imageUrl + ')',
-            backgroundRepeat : 'no-repeat'
-        });
-        jQuery("#contenthome").hide();
 
-        jQuery("#contenthome").fadeIn(2000);
-        jQuery("#contenthome").show();
 
-        setTimeout(function(){
-        jQuery("#contenthome").hide();
-        var imageUrl = 'img/home/02.jpg';
-        jQuery('#contenthome').css({
-            backgroundImage : 'url(' + imageUrl + ')',
-            backgroundRepeat : 'no-repeat'
-        });
-        jQuery("#contenthome").fadeIn(2000);
-            jQuery("#contenthome").show();
 
-        }, + timerOffset);
-
-        timerOffset += timerIncrement;
-        setTimeout(function(){
-
-            jQuery("#contenthome").hide();
-            var imageUrl = 'img/home/03.jpg';
-            jQuery('#contenthome').css({
-                backgroundImage : 'url(' + imageUrl + ')',
-                backgroundRepeat : 'no-repeat'
-            });
-            jQuery("#contenthome").hide();
-
-            jQuery("#contenthome").fadeIn(2000);
-            jQuery("#contenthome").show();
-        }, timerOffset);
-
-        timerOffset += timerIncrement;
-        setTimeout(function(){
-
-            var imageUrl = 'img/home/04.jpg';
-            jQuery('#contenthome').css({
-                backgroundImage : 'url(' + imageUrl + ')',
-                backgroundRepeat : 'no-repeat'
-            });
-            jQuery("#contenthome").hide();
-
-            jQuery("#contenthome").fadeIn(2000);
-            jQuery("#contenthome").show();
-        }, timerOffset);iCount++;
-        }, timerIncrement*4);
     });
 </script>
