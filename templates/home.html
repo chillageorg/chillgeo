@@ -1,29 +1,43 @@
 <div class='conthead home' id="divhome">
 </div>
-<div class='content'>
-<p class="content-home" id="contenthome"></p>
 
+<div class="jumbotron" style="margin-top: 14px;margin-bottom: 14px;" id="jumbotron">
+    <h1>Willkommen bei chillgeo.ch</h1>
+
+    <p>&nbsp;</p>
+
+    <div class="alert alert-info" role="alert" id="alertabout"><a href="#/about" class="alert-link">&Uuml;ber mich</a></div>
+    <div class="alert alert-info" role="alert" id="alertrefs"><a href="#projects" class="alert-link">Projektreferenzen</a></div>
+    <div class="alert alert-info" role="alert" id="alertskills"><a href="#skills" class="alert-link">Skills</a></div>
+    <div class="alert alert-info" role="alert" id="alertservices"><a href="#services" class="alert-link">Dienstleistungen</a>
+    </div>
 </div>
+
+
 <script type="text/javascript">
+
     jQuery(document).ready(function () {
-
-        jQuery('#divhome').hide();
-        jQuery("#divhome").fadeIn(2000);
-        jQuery("#divhome").show();
-
-
-        var imageUrl = 'img/home/01.jpg';
-        jQuery('#contenthome').css({
-            backgroundImage : 'url(' + imageUrl + ')',
-            backgroundRepeat : 'no-repeat'
-        });
-        jQuery("#contenthome").hide();
-
-        jQuery("#contenthome").fadeIn(1000);
-        jQuery("#contenthome").show();
-
-
-
+        jQuery("#navmid").attr('class', 'home');
+        jQuery('#jumbotron').hide();
+        jQuery("#jumbotron").fadeIn(2000);
+        jQuery("#jumbotron").show();
+        timeOutOffset = 0;
+        idsArray = ['#alertabout', '#alertrefs', '#alertskills', '#alertservices'];
+        idsArray.forEach(fSlider);
 
     });
+    function fSlider(element, index, array) {
+        jQuery(element).hide();
+
+        jQuery(element).animate({
+            marginLeft: "-4000px"
+        }, 0);
+
+        jQuery(element).animate({
+            marginLeft: "0px"
+        }, 1000);
+        jQuery(element).show();
+
+
+    }
 </script>
