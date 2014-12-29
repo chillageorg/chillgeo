@@ -10,11 +10,11 @@ $messagetxt = mysql_real_escape_string($data->message);
 
 
 if($name && $vorname) {
-    $to = "chillageorg@swissonline.ch";
+    $to = "chillageorg@hispeed.ch";
     $subject = "Formular von chillgeo.ch";
     
     $header = 'From:'.$email . "\r\n" .
-    		'Reply-To: chillageorg@swissonline.ch' . "\r\n" .
+    		'Reply-To: chillageorg@hispeed.ch' . "\r\n" .
     		'X-Mailer: PHP/' . phpversion();
     
     $message = "\n";
@@ -27,12 +27,12 @@ if($name && $vorname) {
         echo "Sehr geehrte(r) $vorname $name," . "Ihre Daten wurden versendet  ".$strUrl;
         echo "<script>$(\"#form\").hide();$(\"#pflicht\").hide();</script>";
     } catch (Exception $e) {
-        echo "Die Daten wurden nicht an den Server gesendet.";
+        echo "sentsuccess";
     }
     
 
 	
 }
 else {
-	echo "Die Daten wurden nicht an den Server gesendet.";
+	echo "senterror";
 }

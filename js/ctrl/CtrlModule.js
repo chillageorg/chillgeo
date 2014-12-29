@@ -42,21 +42,28 @@ function ProjectsCtrl($scope, $log, $location) {
     }
 
 }
-function ContactCtrl($scope, $log, $http) {
+function ContactCtrl($scope, $log) {
     $log.log("ContactCtrl");
     jQuery("#navmid").attr('class', 'contact');
+
+}
+
+function FormCtrl($scope, $log, $http) {
+    $log.log("FormCtrl");
+
     $scope.submitted = false;
     $scope.signupForm = function () {
         if ($scope.formID.$valid) {
             $log.log("Formular ist valide");
+
             // Senden initieren
 
             $http.post(sendmail,
                 {
-                    'uname': $scope.formID.name,
-                    'vorname': $scope.formID.vorname,
-                    'email': $scope.formID.email,
-                    'message': $scope.formID.message
+                    'uname': $scope.signup.name,
+                    'vname': $scope.signup.vorname,
+                    'email': $scope.signup.email,
+                    'message': $scope.signup.message
                 }).success(function (data) {
                     $log.log(data);
                     jQuery("#formID").hide();

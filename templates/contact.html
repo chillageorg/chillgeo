@@ -9,7 +9,7 @@
     </div>
 
 </div>
-<form id="formID" name="formID" no ng-submit="signupForm()">
+<form id="formID" name="formID" ng-controller="FormCtrl">
 
     <div class='content'>
         <p class="content-header">Kontakt</p>
@@ -65,7 +65,7 @@
         </p>
     </div>
     <div class='content clearfix' style="border: none;">
-        <button type="submit" class="btn btn-primary" style="text-align: left;">abschicken</button>
+        <button type="submit" class="btn btn-primary" style="text-align: left;" ng-click="signupForm()">abschicken</button>
         &nbsp;
         <button type="reset" class="btn btn-danger" style="text-align: left;">Felder leeren</button>
     </div>
