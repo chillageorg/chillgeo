@@ -42,16 +42,26 @@ function ProjectsCtrl($scope, $log, $location) {
     }
 
 }
-function ContactCtrl($scope, $log) {
+function ContactCtrl($scope, $log, $http) {
     $log.log("ContactCtrl");
     jQuery("#navmid").attr('class', 'contact');
     $scope.submitted = false;
     $scope.signupForm = function () {
         if ($scope.formID.$valid) {
             $log.log("Formular ist valide");
-            // Senden
-            jQuery("#formID").hide();
-            jQuery("#divsent").show();
+            // Senden initieren
+
+            $http.post(sendmail,
+                {
+                    'uname': $scope.formID.name,
+                    'vorname': $scope.formID.vorname,
+                    'email': $scope.formID.email,
+                    'message': $scope.formID.message
+                }).success(function (data) {
+                    $log.log(data);
+                    jQuery("#formID").hide();
+                    jQuery("#divsent").show();
+                });
         } else {
             $scope.formID.submitted = true;
             $log.log("Formular ist nicht valide");
@@ -59,7 +69,8 @@ function ContactCtrl($scope, $log) {
 
     }
 }
-
+//var sendmail = 'http://localhost:8888/playground/sendchillgeo.php';
+var sendmail = 'http://www.chillgeo.ch/sendchillgeo.php';
 var ctrl = angular.module('app.ctrl', [])
         .controller('HoneCtrl', HomeCtrl)
         .controller('AboutCtrl', AboutCtrl)
