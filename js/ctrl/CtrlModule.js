@@ -50,6 +50,8 @@ function ContactCtrl($scope, $log) {
         if ($scope.formID.$valid) {
             $log.log("Formular ist valide");
             // Senden
+            jQuery("#formID").hide();
+            jQuery("#divsent").show();
         } else {
             $scope.formID.submitted = true;
             $log.log("Formular ist nicht valide");

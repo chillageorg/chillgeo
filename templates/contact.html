@@ -1,6 +1,15 @@
 <div class='conthead contact' id="divcontact">
 
 </div>
+<div class="jumbotron" style="margin-top: 14px;margin-bottom: 14px;background-color: #c7d8ef;" id="divsent">
+    <h3>Vielen Dank f&uuml;r die Mitteilung</h3>
+
+    <div class="list-group">
+
+        <a href="#contact" class="list-group-item list-group-item-info" id="alertservices">Zur&uuml;ck</a>
+    </div>
+
+</div>
 <form id="formID" name="formID" no ng-submit="signupForm()">
 
     <div class='content'>
@@ -64,7 +73,7 @@
 </form>
 <script type="text/javascript">
     jQuery(document).ready(function () {
-
+        jQuery('#divsent').hide();
         jQuery("#formID").validationEngine();
         jQuery('#divcontact').hide();
         jQuery("#divcontact").fadeIn(2000);
