@@ -1,19 +1,103 @@
-<div class='conthead skills' id="divskills">
+
+<div class='conthead about' id="divabout">
 
 </div>
 <div class='content'>
-    <p class="content-header">Skills</p>
-    <p class="content-text">
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr...<br />
-        <br/>
+<h4>Berufserfahrungen</h4>
+    <ul id="menu" style="margin-bottom: 1px;">
+        <li style="list-style-type: none;"><a href="#" class="list-group-item list-group-item-info">Programmier- und Script-Sprachen</a>
+            <ul>
+                <li style="list-style-type: none;">ColdFusion</li>
+                <li style="list-style-type: none;">PHP</li>
+                <li style="list-style-type: none;">Java JEE</li>
+                <li style="list-style-type: none;">Visual-Basic: VB6.0 / VBA</li>
+                <li style="list-style-type: none;">HTML / CSS</li>
+                <li style="list-style-type: none;">JavaScript</li>
+                <li style="list-style-type: none;">ActionScript</li>
+                <li style="list-style-type: none;">T-SQL</li>
 
-    </p>
+            </ul></li>
+
+        <li style="list-style-type: none;"><a href="#" class="list-group-item list-group-item-info">Datenbanken</a>
+            <ul>
+                <li style="list-style-type: none;">MS-SQL</li>
+                <li style="list-style-type: none;">MySQL</li>
+                <li style="list-style-type: none;">noSQL</li>
+                <li style="list-style-type: none;">ORM</li>
+            </ul></li>
+        <li style="list-style-type: none;"><a href="#" class="list-group-item list-group-item-info">Methoden</a>
+            <ul>
+                <li style="list-style-type: none;">OOA / OOD / OOP</li>
+                <li style="list-style-type: none;">UML</li>
+                <li style="list-style-type: none;">Scrum</li>
+                <li style="list-style-type: none;">Nassi-Shneiderman</li>
+                <li style="list-style-type: none;">Jackson</li>
+            </ul></li>
+        <li style="list-style-type: none;"><a href="#" class="list-group-item list-group-item-info">Entwurfs-Muster / Architekturen</a>
+            <ul>
+                <li style="list-style-type: none;">MVC / MVW</li>
+                <li style="list-style-type: none;">Singleton</li>
+                <li style="list-style-type: none;">Memento</li>
+                <li style="list-style-type: none;">Inversion of Controll / Dependency Injection</li>
+
+            </ul></li>
+        <li style="list-style-type: none;"><a href="#" class="list-group-item list-group-item-info">Frameworks</a>
+            <ul>
+                <li style="list-style-type: none;">Spring</li>
+                <li style="list-style-type: none;">Hibernate / JPA</li>
+                <li style="list-style-type: none;">Wheels (MVC)</li>
+                <li style="list-style-type: none;">Reactor (DAO)</li>
+                <li style="list-style-type: none;">Google Web Toolkit</li>
+                <li style="list-style-type: none;">AngularJS</li>
+                <li style="list-style-type: none;">Bootstrap</li>
+                <li style="list-style-type: none;">jQuery, Prototype (Ajax)</li>
+            </ul></li>
+        <li style="list-style-type: none;"><a href="#" class="list-group-item list-group-item-info">Branchenkenntnisse</a>
+            <ul>
+                <li style="list-style-type: none;">Banken</li>
+                <li style="list-style-type: none;">Detailhandel</li>
+                <li style="list-style-type: none;">Elektroindustrie</li>
+                <li style="list-style-type: none;">Gesundheitswesen</li>
+                <li style="list-style-type: none;">Immobilien</li>
+                <li style="list-style-type: none;">Marketing</li>
+            </ul></li>
+    </ul>
+
 </div>
 <script type="text/javascript">
     jQuery(document).ready(function () {
 
-        jQuery('#divskills').hide();
-        jQuery("#divskills").fadeIn(2000);
-        jQuery("#divskills").show();
+        jQuery('#menu').hide();
+        jQuery("#menu").fadeIn(2000);
+        jQuery("#menu").show();
+    });
+    function treemenu(obj) {
+        if (!obj.length) return;
+        obj.find("ul").each(function() {
+            $(this).css("display", "none");
+        });
+        $("li:not(:has(ul))").find("a").addClass("leaf");
+        obj.find("a").toggle(function(e) {
+            e.preventDefault();
+            $(this).parent().find("ul:first").slideDown(400);
+            classManager($(this));
+        },function(e) {
+            e.preventDefault();
+            $(this).parent().find("ul:first").slideUp(400);
+            classManager($(this));
+        });
+        obj.find("a").dblclick( function() {
+            window.location = $(this).attr("href");
+        });
+    }
+
+    function classManager(obj) {
+        if (!obj.hasClass("leaf")) {
+            obj.toggleClass("selected");
+        }
+    }
+
+    $(document).ready(function() {
+        treemenu($("#menu"));treemenu($("#menus"));
     });
 </script>
