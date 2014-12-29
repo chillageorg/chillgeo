@@ -45,6 +45,17 @@ function ProjectsCtrl($scope, $log, $location) {
 function ContactCtrl($scope, $log) {
     $log.log("ContactCtrl");
     jQuery("#navmid").attr('class', 'contact');
+    $scope.submitted = false;
+    $scope.signupForm = function () {
+        if ($scope.formID.$valid) {
+            $log.log("Formular ist valide");
+            // Senden
+        } else {
+            $scope.formID.submitted = true;
+            $log.log("Formular ist nicht valide");
+        }
+
+    }
 }
 
 var ctrl = angular.module('app.ctrl', [])
@@ -54,4 +65,5 @@ var ctrl = angular.module('app.ctrl', [])
         .controller('SkillsCtrl', SkillsCtrl)
         .controller('ProjectsCtrl', ProjectsCtrl)
         .controller('ContactCtrl', ContactCtrl)
+
     ;

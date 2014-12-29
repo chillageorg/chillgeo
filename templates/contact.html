@@ -1,7 +1,7 @@
 <div class='conthead contact' id="divcontact">
 
 </div>
-<form id="formID">
+<form id="formID" name="formID" no ng-submit="signupForm()">
 
     <div class='content'>
         <p class="content-header">Kontakt</p>
@@ -11,21 +11,39 @@
             <label for="vorname">
                 Vorname<br/><br/>
             </label>
-            <input id="vorname" name="vorname" class="validate[required]" type="text"/>
+            <input class="validate[required]" type="text"
+                   placeholder="Vorname"
+                   id="vorname"
+                   name="vorname"
+                   ng-model="signup.vorname"
+                   ng-minlength=2
+                   ng-maxlength=120 required />
         </p>
 
         <p class="pnormal">
-            <label for="vorname">
+            <label for="name">
                 Name<br/><br/>
             </label>
-            <input id="name" name="name" class="validate[required]" type="text"/>
+            <input class="validate[required]" type="text"
+                   placeholder="Name"
+                   id="name"
+                   name="name"
+                   ng-model="signup.name"
+                   ng-minlength=2
+                   ng-maxlength=120 required />
         </p>
 
         <p class="pnormal">
             <label>
                 Email<br/><br/>
             </label>
-            <input value="" class="validate[required,custom[email]] text-input" type="text" name="email" id="email"/>
+
+            <input type="email"
+                   class="validate[required,custom[email]]"
+                   placeholder="Email"
+                   name="email" id="email"
+                   ng-model="signup.email"
+                   ng-minlength=3 ng-maxlength=20 required />
         </p>
 
 
@@ -33,7 +51,7 @@
             <label for="message">
                 Mitteilung<br/><br/>
             </label>
-            <textarea class="validate[required]" id="message"></textarea>
+            <textarea class="validate[required]" name="message" id="message" placeholder="Ihre Mitteilung" ng-model="signup.message" required></textarea>
 
 
         </p>
