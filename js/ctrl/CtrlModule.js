@@ -56,6 +56,7 @@ function FormCtrl($scope, $log, $http) {
         if ($scope.formID.$valid) {
             $log.log("Formular ist valide");
             jQuery("#divload").show();
+            jQuery("#formID").hide();
             // Senden initieren
 
             $http.post(sendmail,
@@ -66,7 +67,7 @@ function FormCtrl($scope, $log, $http) {
                     'message': $scope.signup.message
                 }).success(function (data) {
                     $log.log(data);
-                    jQuery("#formID").hide();
+
                     jQuery("#divsent").show();
                     jQuery("#divload").hide();
                 });
