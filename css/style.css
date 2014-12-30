@@ -77,6 +77,13 @@ body {
     background-size:100%;
     opacity: 0.9;
 }
+.conthead.skills{
+    background-color: #005580;
+    background-image: url('../img/bannerskills.jpg');
+    background-repeat: no-repeat;
+    background-size:100%;
+    opacity: 0.9;
+}
 .conthead.contact{
     background-color: #ffffff;
     background-image: url('../img/bannercontact.jpg');

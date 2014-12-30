@@ -10,28 +10,30 @@ $messagetxt = mysql_real_escape_string($data->message);
 
 
 if($name && $vorname) {
-    $to = "chillageorg@hispeed.ch";
-    $subject = "Formular von chillgeo.ch";
-    
-    $header = 'From:'.$email . "\r\n" .
+	$to = "chillageorg@hispeed.ch";
+	$subject = "Formular von chillgeo.ch";
+
+	$header = 'From:'.$email . "\r\n" .
     		'Reply-To: chillageorg@hispeed.ch' . "\r\n" .
     		'X-Mailer: PHP/' . phpversion();
-    
-    $message = "\n";
-    $message .= "Name: ".$name. "\n";
-    $message .= "Vorname: ".$vorname. "\n\n";
-    $message .= "Meldung:\n".$messagetxt. "\n";
-    $strUrl = "<strong>--><a href=\"http://www.chillgeo.ch\" targed=\"_self\" >zur&uuml;ck</a></strong>";
-    try {
-        mail($to, $subject, $message,$header);
-        echo "Sehr geehrte(r) $vorname $name," . "Ihre Daten wurden versendet  ".$strUrl;
-        echo "<script>$(\"#form\").hide();$(\"#pflicht\").hide();</script>";
-    } catch (Exception $e) {
-        echo "sentsuccess";
-    }
-    
 
-	
+	$message = "\n";
+	$message .= "Name: ".$name. "\n";
+	$message .= "Vorname: ".$vorname. "\n\n";
+	$message .= "Meldung:\n".$messagetxt. "\n";
+	$strUrl = "<strong>--><a href=\"http://www.chillgeo.ch\" targed=\"_self\" >zur&uuml;ck</a></strong>";
+	try {
+		mail($to, $subject, $message,$header);
+		echo "$to<br />";
+		echo "$subject<br />";
+		echo "$message<br />";
+		echo "$header<br />";
+	} catch (Exception $e) {
+		echo "sentnosuccess";
+	}
+
+
+
 }
 else {
 	echo "senterror";

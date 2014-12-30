@@ -55,23 +55,25 @@ function FormCtrl($scope, $log, $http) {
     $scope.signupForm = function () {
         if ($scope.formID.$valid) {
             $log.log("Formular ist valide");
-
+            jQuery("#divload").show();
             // Senden initieren
 
             $http.post(sendmail,
                 {
                     'uname': $scope.signup.name,
-                    'vname': $scope.signup.vorname,
+                    'vorname': $scope.signup.vorname,
                     'email': $scope.signup.email,
                     'message': $scope.signup.message
                 }).success(function (data) {
                     $log.log(data);
                     jQuery("#formID").hide();
                     jQuery("#divsent").show();
+                    jQuery("#divload").hide();
                 });
         } else {
             $scope.formID.submitted = true;
             $log.log("Formular ist nicht valide");
+            jQuery("#divload").hide();
         }
 
     }
