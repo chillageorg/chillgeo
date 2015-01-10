@@ -12,6 +12,14 @@
     </div>
 
 </div>
+<div class="jumbotron" style="margin-top: 14px;margin-bottom: 14px;background-color:#337ab7;" id="diverror">
+    <h3 class="bg-danger">Fehler bei der &Uuml;bermittlung</h3>
+
+    <div class="list-group">
+        <a href="#contact" class="list-group-item list-group-item-success" id="alertservices">Zur&uuml;ck</a>
+    </div>
+
+</div>
 <form id="formID" name="formID" ng-controller="FormCtrl">
 
     <div class='content'>
@@ -75,6 +83,7 @@
 </form>
 <script type="text/javascript">
     jQuery(document).ready(function () {
+        jQuery('#diverror').hide();
         jQuery('#divsent').hide();
         jQuery("#divload").hide();
         jQuery("#formID").validationEngine();

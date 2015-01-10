@@ -67,8 +67,13 @@ function FormCtrl($scope, $log, $http) {
                     'message': $scope.signup.message
                 }).success(function (data) {
                     $log.log(data);
-
-                    jQuery("#divsent").show();
+                    if(data == "sentok") {
+                        jQuery("#divsent").show();
+                    }
+                    else
+                    {
+                        jQuery("#diverror").show();
+                    }
                     jQuery("#divload").hide();
                 });
         } else {
